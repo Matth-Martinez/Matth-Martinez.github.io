@@ -1,1 +1,223 @@
-hello, world
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <title>Matthew Martinez</title>
+  <style>
+    /* * {
+          border: thin red solid;
+        }
+        */
+    body {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 640px;
+      flex-grow: 1;
+    }
+
+    .name {
+      color: #fffffe;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .social-icons a {
+      
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      box-shadow: var(--shadow-elevation-medium);
+    }
+
+    .link {
+      padding: 5px;
+      border-radius: 500px;
+      display: flex;
+      align-items: center;
+      box-shadow: var(--shadow-elevation-low);
+      transition: 0.3s
+      
+    }
+
+    .link:hover {
+      box-shadow: var(--shadow-elevation-medium);
+    }
+
+    .link-text {
+      color: white;
+      flex:1;
+      text-align: center;
+      text-decoration: none;
+      padding: 0 5px;
+    }
+
+    /*.link a {
+      background-color: #fff;
+      opacity: 40%;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      flex-grow: 1;
+    }
+    */
+    .banner-image {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border-radius: 128px;
+    }
+
+    .thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      object-fit: cover;
+    }
+
+    .banner {
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .background--custom {
+        background-color: #1B1616;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        z-index: -2;
+        top: 0;
+        left: 0;
+      }
+      canvas#canvas {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        transform: rotate(-14deg) scale(2) translateY(0%);
+        --gradient-color-1: #4B4245; 
+        --gradient-color-2: #1B1E20; 
+        --gradient-color-3: #3B3838;  
+        --gradient-color-4: #423E3E;
+        --gradient-speed: 0.000016;
+      }
+
+      .glassy {
+      background-color: rgba(149, 123, 173, 0.75);
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .glassy {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(149, 123, 173, 0.5);
+      }
+
+      .warning {
+        display: none;
+      }
+    }
+
+    :root {
+      --shadow-color: 272deg 21% 35%;
+      --shadow-elevation-low:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.17),
+        0.4px 0.9px 1.3px -0.6px hsl(var(--shadow-color) / 0.29),
+        1px 2px 2.9px -1.2px hsl(var(--shadow-color) / 0.4);
+      --shadow-elevation-medium:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.18),
+        1px 2px 2.9px -0.4px hsl(var(--shadow-color) / 0.27),
+        2.3px 4.5px 6.6px -0.8px hsl(var(--shadow-color) / 0.36),
+        5px 10px 14.7px -1.2px hsl(var(--shadow-color) / 0.45);
+      --shadow-elevation-high:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.17),
+        2px 4.1px 6px -0.2px hsl(var(--shadow-color) / 0.21),
+        3.7px 7.3px 10.7px -0.4px hsl(var(--shadow-color) / 0.25),
+        5.6px 11.2px 16.4px -0.5px hsl(var(--shadow-color) / 0.29),
+        8.3px 16.6px 24.4px -0.7px hsl(var(--shadow-color) / 0.34),
+        12.1px 24.2px 35.5px -0.9px hsl(var(--shadow-color) / 0.38),
+        17.5px 35.1px 51.5px -1.1px hsl(var(--shadow-color) / 0.42),
+        25px 50px 73.4px -1.2px hsl(var(--shadow-color) / 0.46);
+    }
+
+    
+  </style>
+
+  <script src="https://kit.fontawesome.com/9b3b96483b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="items">
+    <div class="banner">
+      <img src="new-profile-picture.jpg" alt="Matthew Martinez headshot" class="banner-image">
+    </div>
+
+    <div class="name">
+      <p>Matthew Martinez</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/matthew-martinez-28bab0237" target="_blank"><i
+          class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+
+
+      <a href="https://github.com/matth-martinez" target="_blank"><i class="fa-brands fa-github-alt fa-2xl"></i>
+      </a>
+
+      <a href="https://www.instagram.com/matthew.martinez.dev/" target="_blank"><i
+          class="fa-brands fa-instagram fa-2xl"></i></a>
+    </div>
+
+    <div class="link glassy">
+      <img class="thumbnail"
+        src="https://www.ycombinator.com/assets/ycdc/yc-og-image-0cfa80cac837d64d9b4f0705950000b66906ac032791376bd721f246fafcc7b4.png">
+
+      <a class="link-text" target="_blank" href="http://paulgraham.com/startupideas.html">How to Get Startup Ideas
+        — Paul Graham</a>
+      </div>
+    <div class="link glassy">
+      <img class="thumbnail"
+        src="thumbnails/grokkings.jpg">
+        <a class="link-text" target="_blank" href="https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf">Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People - Aditya Bhargava
+        </a>
+    </div>
+  </div>
+  <div class="background--custom">
+    <canvas id="canvas" />
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+  <script>
+  var gradient = new Gradient();
+  gradient.initGradient("#canvas");
+  </script>
+</body>
+
+</html>
+
